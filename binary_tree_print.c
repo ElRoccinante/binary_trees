@@ -1,9 +1,19 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
 #include "binary_trees.h"
+
+/* Original code from http://stackoverflow.com/a/13755911/5184480 */
+
 /**
- * binary_tree_insert_left - function that insert left to a node
- * @parent: parent of the inserted node
- * @value: value of the inserted node
- * Return: the pointer to the node added
+ * print_t - Stores recursively each level in an array of strings
+ *
+ * @tree: Pointer to the node to print
+ * @offset: Offset to print
+ * @depth: Depth of the node
+ * @s: Buffer
+ *
+ * Return: length of printed tree after process
  */
 static int print_t(const binary_tree_t *tree, int offset, int depth, char **s)
 {
